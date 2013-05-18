@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+
+body {
+       margin: 0px;
+       padding: 0px;
+     }
+   
+     #schematic_canvas {
+       border: 1px solid #9C9898;
+     }
+</style>
+
+</head>
+
+<body>
+<h1> Schematic Map</h1>
+<canvas id="schematic_canvas" width="578" height="200"></canvas>
+<script>
+var canvas_schematic= document.getElementById('schematic_canvas');
+var context=canvas_schematic.getContext('2d');
+var center_X=canvas_schematic.width/2;
+var center_Y=canvas_schematic.height/2;
+var radius=70;
+
+context.beginPath();
+context.arc(center_X,center_Y,radius,0,2*Math.PI, false);
+context.fillStyle='blue';
+context.fill();
+context.lineWidth=5;
+context.strokeStyle = '#003300';
+context.stroke();
+
+context.beginPath();
+context.moveTo(289,170);
+context.lineTo(289,30);
+
+context.stroke();
+
+context.beginPath();
+context.moveTo(222,120);
+context.lineTo(130,160);
+
+context.stroke();
+
+context.beginPath();
+context.moveTo(222,80);
+context.lineTo(130,40);
+
+context.stroke()
+
+context.beginPath();
+context.moveTo(355,120);
+context.lineTo(447,160);
+
+context.stroke();
+
+
+context.beginPath();
+context.moveTo(355,80);
+context.lineTo(447,40);
+context.closePath();
+context.stroke();
+
+
+
+
+</script>
+</body>
+
+</html>
